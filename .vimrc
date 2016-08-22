@@ -16,6 +16,15 @@ set relativenumber
 " Syntax highlighting
 syntax on
 
+" Spell Checking
+"set spell
+
+" Save Cursor Position
+augroup resCur
+    autocmd!
+    autocmd BufReadPost * call setpos(".", getpos("'\""))
+augroup END
+
 " Bash-like tab completion
 set wildmode=longest,list,full
 set wildmenu
